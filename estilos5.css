@@ -1,0 +1,33 @@
+.invalid-feedback {
+    color: #FFDD00 !important; 
+    font-size: 0.85em;
+    margin-top: 5px; 
+    text-align: left;
+    display: none;
+}
+
+.was-validated .invalid-feedback {
+    display: block;
+}
+
+.was-validated .formulario-registro input:invalid,
+.was-validated .formulario-registro select:invalid {
+
+    border-color: #FFDD00 !important; 
+    box-shadow: 0 0 0 0.25rem rgba(255, 221, 0, 0.25) !important;
+}
+
+.was-validated .formulario-registro input:valid,
+.was-validated .formulario-registro select:valid {
+    border-color: initial !important; 
+    box-shadow: none !important;
+}
+
+.grupo-checkbox .invalid-feedback {
+
+    width: 100%; 
+    
+    text-align: center !important; 
+
+    margin-top: 5px; 
+}

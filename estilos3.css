@@ -1,0 +1,122 @@
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1050; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px 0; 
+}
+
+
+.modal.activo {
+    display: block; 
+}
+
+
+.modal-contenido {
+
+    background-color: #103B8A; 
+    color: white; 
+    margin: 40px auto; 
+    padding: 25px; 
+    border-radius: 5px;
+    width: 90%; 
+    max-width: 400px; 
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-contenido h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+
+.cerrar-btn {
+    color: #fff; 
+    opacity: 0.8;
+    float: right;
+    font-size: 30px;
+    font-weight: normal; 
+    cursor: pointer;
+    line-height: 1;
+    margin-top: -5px; 
+}
+
+.cerrar-btn:hover,
+.cerrar-btn:focus {
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+}
+
+
+.modal-contenido .form-label { 
+    display: block;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    text-align: left; 
+    font-size: 0.95rem;
+}
+
+
+.modal-contenido .form-control, 
+.modal-contenido .form-select { 
+    width: 100%;
+    background-color: white; 
+    border: none; 
+    border-radius: 0; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    color: #333; 
+    font-size: 1rem;
+    line-height: normal; 
+    height: 40px; 
+}
+
+
+.modal-contenido .form-control::placeholder,
+.modal-contenido .custom-file-input {
+    color: #999;
+}
+
+
+
+.modal-contenido .custom-file-input {
+    cursor: pointer;
+}
+
+
+.modal-contenido .btn-danger {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 3px;
+
+}
+
+
+
+.modal-contenido .invalid-feedback {
+    display: none; 
+    color: #FFDD00 !important; 
+    font-size: 0.85rem !important;
+    margin-top: 5px !important; 
+    margin-bottom: -15px !important;
+    text-align: left;
+
+}
+
+
+
+.modal-contenido .was-validated :invalid ~ .invalid-feedback {
+    display: block !important;
+}

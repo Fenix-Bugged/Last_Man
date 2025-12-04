@@ -6,13 +6,11 @@
     font-family: Arial, sans-serif;
 }
 
-/* ========================
-   HEADER
-======================== */
+/* el header lol */
 .main-header {
     width: 100%;
     color: white;
-    padding: 15px 40px;
+    padding: 90px 55px;
 
     display: flex;
     justify-content: space-between;
@@ -49,9 +47,7 @@
     text-decoration: underline;
 }
 
-/* ========================
-   HERO
-======================== */
+/* el hero w */
 .hero-section {
     text-align: left;
     padding: 70px 40px;
@@ -70,8 +66,8 @@
 /* ==las cards w== */
 .info-card {
     border-radius: 10px;
-    padding: 25px;
-    min-height: 500px;
+    padding: 25px; 
+    min-height: 500px; 
     text-align: center;
     transition: 0.7s ease;
     border: 1px solid #b9b9b9;
@@ -107,13 +103,11 @@
 /* Títulos de cards */
 .info-card h4 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
     font-weight: bold;
 }
 
-/* ========================
-   FOOTER
-======================== */
+
 .main-footer {
     width: 100%;
     background: #0E2F6B;
@@ -124,12 +118,12 @@
     margin-top: 125px;
 }
 
-/* Barra azul */
+
 .nav-custom {
     background-color: #103B8A;
 }
 
-/* Links */
+
 .nav-link {
     font-size: 16px;
     margin-left: 10px;
@@ -138,4 +132,117 @@
 
 .nav-link:hover {
     text-decoration: underline;
+}
+
+
+.quienes-somos-hero {
+    height: 400px;
+    width: 100%; 
+    
+
+    background-image: url('imageneswasa/unosbomberoswe.png'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    display: flex;
+ 
+    justify-content: flex-start;
+}
+
+
+.texto-somos {
+ 
+    width: 55%; 
+    height: 100%;
+    
+ 
+    background-color: rgba(100, 100, 100, 0.7); 
+    
+ 
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.texto-somos .titulo-gris {
+    font-size: 3em;
+    font-weight: 700;
+    color: white; 
+    margin-bottom: -15px; 
+}
+
+.texto-somos .titulo-azul {
+    font-size: 5.5em;
+    font-weight: 800;
+    color: #4A90E2; 
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.texto-somos p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    font-weight: 300;
+    color: white; 
+}
+
+
+.info-card h4 {
+    color: #103B8A; 
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 20px; 
+}
+
+.info-card p {
+    font-size: 15px;
+    text-align: left;
+}
+
+
+.info-card ul {
+    list-style-type: none; 
+    padding-left: 0;
+    text-align: left;
+}
+
+.info-card ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 92px) {
+    
+    .quienes-somos-hero {
+        height: auto; 
+        background-size: auto 350px; 
+        background-position: center bottom; 
+    }
+    
+    .texto-somos {
+        width: 50%; 
+        height: auto;
+        padding: 30px 20px;
+ 
+        background-color: rgba(100, 100, 100, 0.473);
+    }
+
+    .texto-somos .titulo-gris {
+        font-size: 2.5em;
+        margin-bottom: -10px;
+        font-weight: 700;
+    }
+    
+    .texto-somos .titulo-azul {
+        font-size: 4em;
+    }
+    
+
+    .info-card {
+        min-height: auto;
+    }
+    
 }

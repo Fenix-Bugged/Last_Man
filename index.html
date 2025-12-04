@@ -9,64 +9,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos3.css">
+    <link rel="stylesheet" href="estilos4.css">
+
 </head>
 
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark nav-custom">
-        <div class="container-fluid">
-
-            <div class="d-flex align-items-center gap-2">
-                <h2 class="text-white m-0">Last Man</h2>
-
-                <img src="imageneswasa/logowajaja.png" alt="logo" class="logo-img">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark nav-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <h2 class="text-white m-0">Last Man</h2>
+                    <img src="imageneswasa/logowajaja.png" alt="logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+<div class="collapse navbar-collapse justify-content-end" id="menu">
+<ul class="navbar-nav mb-2 mb-lg-0">
+    
+    <li class="nav-item"><a class="nav-link" href="#" id="btnAbrirContacto">Contacto</a></li>
+    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+    
+    <li class="nav-item" id="nav-registrarse-item">
+        <a class="nav-link" href="registrate.html">Registrarse</a>
+    </li>
+    <li class="nav-item" id="nav-iniciarsesion-item">
+        <a class="nav-link" href="iniciar.html">Iniciar Sesión</a>
+    </li>
+    
+    <li class="nav-item d-none" id="nav-cerrarsesion-item"> 
+        <a class="nav-link" href="#" id="btn-cerrarsesion">Cerrar Sesión</a>
+    </li>
+    
+</ul>
+</div>
+                </div>
             </div>
+        </nav>
+    </header>
 
-        
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- MENÚ (Derecha) -->
-            <div class="collapse navbar-collapse justify-content-end" id="menu">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Iniciar Sesión</a></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-</header>
-
-    <!-- ▬▬▬▬▬▬▬ HERO ▬▬▬▬▬▬▬ -->
     <section class="hero-section">
         <h1>Last Man</h1>
         <p>Un camino a la libertad y un futuro más seguro</p>
     </section>
 
-    <!-- ▬▬▬▬▬▬▬ CARDS ▬▬▬▬▬▬▬ -->
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center g-4">
 
-            <!-- Card 1 -->
             <div class="col-12 col-md-4">
                 <div class="info-card card-azul">
                     <img src="imageneswasa/unaserpientexd.png" alt="icono" class="icono-card">
                     <h4>¿Sabías que?...</h4>
                     <p>
                         El 80% de las emergencias se atienden primero por alguien sin formación profesional,
-                        por eso saber primeros auxilios puede literalmente salvar vidas antes de que llegue ayuda especializada.
+                        por eso saber primeros auxilios puede literalmente salvar vidas antes de que llegue ayuda
+                        especializada.
                     </p>
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="col-12 col-md-4">
                 <div class="info-card card-azul-claro">
                     <img src="imageneswasa/lamano.png" alt="icono" class="icono-card">
@@ -78,7 +81,6 @@
                 </div>
             </div>
 
-            <!-- Card 3 (rosada) -->
             <div class="col-12 col-md-4">
                 <div class="info-card card-rosada">
                     <img src="imageneswasa/laimagendelunuete.png" alt="icono" class="icono-card">
@@ -87,17 +89,111 @@
                         Sé parte del voluntariado de futuros brigadistas que colaboren por un futuro más seguro y
                         cómodo para la comunidad y la nación.
                     </p>
-                    <a class="btn btn-danger mt-3">Unirse</a>
+                    <a class="btn btn-danger mt-3" id="btnAbrirRegistro" href="#">Unirse</a>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <!-- ▬▬▬▬▬▬▬ FOOTER ▬▬▬▬▬▬▬ -->
     <footer class="main-footer">
         Last man &copy; todos los derechos reservados - 2025
     </footer>
 
+<div id="modalRegistro" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-btn">&times;</span>
+        <h3 class="titulo-modal">Únete aquí</h3>
+
+        <form id="formRegistro" class="needs-validation" novalidate>
+            
+            <div class="mb-3">
+                <label for="regNombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="regNombre" name="nombre" placeholder="Escribe tu nombre aquí..." required>
+                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="regApellido" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="regApellido" name="apellido" placeholder="Escribe tu apellido aquí..." required>
+                <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="regCorreo" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="regCorreo" name="correo" placeholder="ejemplo@correo.com" required>
+                <div class="invalid-feedback">El correo es obligatorio y debe tener un formato válido.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="regFechaNac" class="form-label">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="regFechaNac" name="fechaNacimiento" required>
+                <div class="invalid-feedback">Por favor, selecciona tu fecha de nacimiento.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="regGenero" class="form-label">Género:</label>
+                <select class="form-select" id="regGenero" name="genero" required>
+                    <option value="">Selecciona...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <div class="invalid-feedback">Debes seleccionar una opción.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="regTipoDoc" class="form-label">Tipo de documento:</label>
+                <select class="form-select" id="regTipoDoc" name="tipoDocumento" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="cc">Cédula (CC)</option>
+                    <option value="ti">Tarjeta de Identidad (TI)</option>
+                    <option value="pasaporte">Pasaporte</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <div class="invalid-feedback">Selecciona el tipo.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="regNumDoc" class="form-label">Número de Documento:</label>
+                <input type="number" class="form-control" id="regNumDoc" name="numeroDocumento" placeholder="123456789125" required>
+                <div class="invalid-feedback">Ingresa tu número de documento.</div>
+            </div>
+
+            <div class="mb-4">
+                <label for="regCargarDoc" class="form-label">Cargar Documento (en PDF):</label>
+                <input type="text" class="form-control custom-file-input" value="Cargar Archivo..." readonly
+                    onclick="document.getElementById('file-upload-input').click()">
+                <input type="file" id="file-upload-input" name="documentoPDF" accept=".pdf" required
+                    style="display: none;">
+                <div class="invalid-feedback">Debes cargar un documento en formato PDF.</div>
+            </div>
+            
+            <button type="submit" class="btn btn-danger w-100">Unirse</button>
+        </form>
+        </div>
+</div>
+
+<div id="modalContacto" class="modal">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-btn" id="btnCerrarContacto">&times;</span>
+            <h3 class="titulo-modal mb-4">Contáctanos</h3>
+
+            <div class="info-contacto-caja mb-3">
+                <p class="m-0"><i class="bi bi-phone me-2"></i> **Número de Contacto:**</p>
+                <p class="m-0 numero-correo-texto">+57 300 123 4567</p>
+            </div>
+
+            <div class="info-contacto-caja">
+                <p class="m-0"><i class="bi bi-envelope me-2"></i> **Correo Electrónico:**</p>
+                <p class="m-0 numero-correo-texto">soporte@lastman.com</p>
+            </div>
+
+            <small class="d-block mt-4 text-white-50">Te responderemos a la brevedad posible.</small>
+        </div>
+    </div>
+
+<script src="logica1.js"></script>
+<script src="logica2.js"></script>
+<script src="logica_sesion.js"></script>
 </body>
 </html>
